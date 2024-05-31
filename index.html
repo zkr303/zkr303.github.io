@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script>
+			(function () {
+				var a_idx = 0;
+				window.onclick = function (event) {
+					var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
+						"❤敬业❤", "❤诚信❤", "❤友善❤", "ker 祝你 一路顺风 半路掉坑");
+	 
+					var heart = document.createElement("b"); //创建b元素
+					heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
+	 
+					document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+					a_idx = (a_idx + 1) % a.length;
+					heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+	 
+					var f = 16, // 字体大小
+						x = event.clientX - f / 2, // 横坐标
+						y = event.clientY - f, // 纵坐标
+						c = randomColor(), // 随机颜色
+						a = 1, // 透明度
+						s = 1.2; // 放大缩小
+	 
+					var timer = setInterval(function () { //添加定时器
+						if (a <= 0) {
+							document.body.removeChild(heart);
+							clearInterval(timer);
+						} else {
+							heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+								c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+								s + ");";
+	 
+							y--;
+							a -= 0.016;
+							s += 0.002;
+						}
+					}, 15)
+	 
+				}
+				// 随机颜色
+				function randomColor() {
+	 
+					return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+					.random() * 255)) + ")";
+	 
+				}
+			}());
+		</script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Zhangkerの个人主页</title>
+		<style>
+			body {
+			            font-family: Arial, sans-serif;
+			            margin: 0;
+			            padding: 0;
+			            background-color: #f3f3f3;
+			            color: #333;
+			        }
+			        header {
+			            background-color: #007bff;
+			            color: #fff;
+			            padding: 20px;
+			            text-align: center;
+			            border-bottom-left-radius: 20px;
+			            border-bottom-right-radius: 20px;
+			        }
+			        .container {
+			            max-width: 800px;
+			            margin: 20px auto;
+			            padding: 20px;
+			            background-color: #fff;
+			            border-radius: 20px;
+			            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			        }
+			        section {
+			            margin-bottom: 20px;
+			        }
+			        h2 {
+			            color: #007bff;
+			        }
+			        .about-me {
+			            border-bottom: 1px solid #ccc;
+			            padding-bottom: 20px;
+			            margin-bottom: 20px;
+			        }
+			        .skills ul {
+			            list-style-type: none;
+			            padding: 0;
+			        }
+			        .skills ul li {
+			            margin-bottom: 10px;
+			        }
+			        .contact-info {
+			            text-align: center;
+			        }
+			        footer {
+			            text-align: center;
+			            padding: 20px 0;
+			            background-color: #007bff;
+			            color: #fff;
+			            border-top-left-radius: 20px;
+			            border-top-right-radius: 20px;
+			        }
+			        .button {
+			            display: inline-block;
+			            background-color: #007bffc0;
+			            color: #fff;
+			            padding: 10px 20px;
+			            text-decoration: none;
+			            border-radius: 5px;
+			            margin-right: 10px;
+			        }	
+				.heimu,.heimu rt {
+			    background-color: #252525
+			}
+			
+			.heimu,.heimu a,a .heimu,a.new .heimu,span.heimu a.new,span.heimu a.external,span.heimu a.external:visited,span.heimu a.extiw,span.heimu a.extiw:visited,span.heimu a.mw-disambig,span.heimu a.mw-redirect {
+			    transition: color 0.13s linear;
+			    color: #252525;
+			    text-shadow: none
+			}
+				span.heimu:hover,span.heimu:active {
+			    color: white
+			}
+			
+			span.heimu:hover a,a:hover span.heimu {
+			    color: lightblue
+			}
+			
+			span.heimu:hover a:visited,a:visited:hover span.heimu {
+			    color: #C5CAE9
+			}
+			
+			span.heimu:hover a.new,a.new:hover span.heimu {
+			    color: #FCC
+			}
+			
+			span.heimu a.new:hover:visited,a.new:hover:visited span.heimu {
+			    color: #EF9A9A
+			}
+			
+			span.heimu:hover a.extiw:visited,a.extiw:visited:hover span.heimu {
+			    color: #D1C4E9
+			}
+
+			.button1 {
+        display: inline-block;
+        /* Old background-color style */
+        background-color: #9900ff8a;
+        /* New gradient background */
+        background-image: linear-gradient(to right, #9900ff, #ff9900);
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+	.button1:hover {
+        background-image: linear-gradient(to right, #ff9900, #9900ff); /* Gradient background on hover */
+    }
+					.button2 {
+			            display: inline-block;
+			            background-color: #621a9221;
+			            color: #000000;
+			            padding: 10px 20px;
+			            text-decoration: none;
+			            border-radius: 5px;
+			            margin-right: 10px;
+			        }
+					.button2:hover {
+        background-image: linear-gradient(to right, #0091ff, #9900ff); /* Gradient background on hover */
+    }
+					body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('img0.png'); /* Add this line to set the background image */
+        background-size: cover; /* Adjust background size as needed */
+        background-repeat: no-repeat; /* Prevent background image from repeating */
+        background-position: center; /* Center the background image */
+        background-color: #f3f3f3;
+        color: #333;
+    }
+
+	.marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff00;
+        color: #ff0062c4;
+        padding: 18px 0;
+        animation: marquee 25s linear infinite; /* Adjust duration as needed */
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+		</style>
+	</head>
+	<body>
+		<!-- Marquee for scrolling message -->
+<div class="marquee">标记“👌”的是可用GPT4，“😀”为免费，“ℹ”则需要一定充值，“⏹”则需要充值token</div>
+		<!--以上《/style》以上为核心css，别动！-->
+		<header>
+			<h1>ChatGPT可用站点</h1>
+		</header>
+		<div class="container">
+			<section class="contact-info">
+				
+				<!--</section>-->
+				<!--上面的sec开头的是居中设置，不想可以全删-->
+				<a class="button2" href="index.html">Chat首页</a>
+				<a class="button2" href="https://aszhangker.github.io/">回到站点</a>
+				<section class="about-me">
+					<h2>ChatGPT可用站点</h2>
+					<a class="button1" href="https://chatgptplus.cn/">0.[👌😀][速度较慢& 全部免费！]</a>
+					<br>
+					<a class="button1" href="https://site.easygpt.work/">1.[👌😀][ℹ][不稳定]</a>
+					<br>
+					<a class="button1" href="https://na1235.aitianhu1.top/">2.[👌ℹ][😀][不稳定]</a>
+					<br>
+					<a class="button1" href="https://chat.tinycms.xyz:3002/">3.[😀👌ℹ][稳定]</a>
+					<br>
+					<a class="button1" href="https://chat.openai.com">[😀][ℹ⏹][最稳定]</a>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					</section>
+		</div>
+		<footer>
+			<p>&copy; ChatGPT可用站点一览表</p>
+			<a class="button" href="chest.html"></a>
+			<br>
+			<a class="button2" href="settings.html">管理设置</a>
+			<p>Creative by ker</p>
+		</footer>
+	</body>
+</html>
